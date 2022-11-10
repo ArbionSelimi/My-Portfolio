@@ -5,51 +5,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ArbionSelimi Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/A-logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <script src="/script.js"></script>
   </head>
-  <body>
-    <header id="header">
-      <h1 class="page-tittle">#ArbionSelimi-Portfolio</h1>
-      <ul class="nav">
-        <li><a href="#intro">#intro</a></li>
-        <li><a href="#about">#about</a></li>
-        <li><a href="#education">#education</a></li>
-        <li><a href="#contact">#contact</a></li>
-      </ul>
-    </header>
 
-    <section id="intro">
-      <img src="./assets/imgs/IMG_2392.jpg" alt="Me" width="300px" />
-      <h2 class="title">[Hello 🌍, I'm Arbion 💥]</h2>
-      <h1 class="subtitle">
-        {I am a Front-End Developer 👨🏻‍💻, a Problem Solver ✅, and a Good Guy 😄}
-      </h1>
-    </section>
+  <body>
+    <div id="overlay">
+      <div class="overlay-background">
+        <header id="header">
+          <div class="nav-left">
+            <img src="./assets/imgs/A-logo.svg" alt="logo" />
+            <h1 class="page-tittle">#arbionselimi-portfolio</h1>
+          </div>
+          <ul class="nav">
+            <li><a href="#">#intro</a></li>
+            <li><a href="#about">#about</a></li>
+            <li><a href="#education">#education</a></li>
+            <li><a href="#contact">#contact</a></li>
+          </ul>
+        </header>
+
+        <div class="back-to-top">
+          <a href="#overlay">
+            <img src="./assets/imgs/back-to-top.png" alt="backtotop" />
+          </a>
+        </div>
+        <section id="intro">
+          <h2 class="title active fade-right">[Hello 🌍, I'm Arbion 💥]</h2>
+          <h1 class="subtitle active fade-left">
+            {I am a Front-End Developer 👨🏻‍💻, a Problem Solver ✅, and a Good Guy
+            😄}
+          </h1>
+        </section>
+        <div class="scroll-downs">
+          <div class="mousey">
+            <div class="scroller"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="about">
-      <h1 class="title">About Me 😀</h1>
-      <h2 class="subtitle">Little Bio</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod odio,
-        perspiciatis tenetur repudiandae mollitia iste molestiae. Molestias nisi
-        tempore consequuntur laudantium dolores porro impedit. Aperiam quos
-        quasi laborum consequuntur ipsam.
-      </p>
+      <h1 class="title">[About Me 😀]</h1>
+      <div class="bio-container">
+        <div class="bio-container-left reveal fade-left">
+          <img src="./assets/imgs/IMG_2392.jpg" alt="Me" />
+        </div>
+        <div class="bio-container-right reveal fade-right">
+          <h2 class="subtitle">{Little Bio}</h2>
+          <br />
+          <br />
+          <br />
+          <p>
+            As you have seen in the introduction, I am Arbion Selimi, born and
+            raised in Pristina, Kosovo.
+          </p>
+          <br />
+          <br />
+          <p>
+            As a child I was passionate about IT and electronics. Over time, I
+            learned computer hardware and electronics in general.
+          </p>
+          <br />
+          <br />
+          <p>
+            My hobby is repairing computers, mobile phones, televisions, etc.,
+            these electronics in general, because I have good knowledge in this
+            field and I like to repair both hardware and software of these
+            devices during my free time.
+          </p>
+          <br />
+          <br />
+          <p>
+            Being so involved in technology, and loving it so much, I graduated
+            from the Faculty of Electronics and Computer Sciences.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="education">
-      <h1 class="title">Education 📚</h1>
-      <h2 class="subtitle">Education and Courses</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod odio,
-        perspiciatis tenetur repudiandae mollitia iste molestiae. Molestias nisi
-        tempore consequuntur laudantium dolores porro impedit. Aperiam quos
-        quasi laborum consequuntur ipsam.
-      </p>
+      <h1 class="title">[Education 📚]</h1>
+      <div class="edu-info reveal fade-top">
+        <div>
+          <p>BSC. in Computer Engineering</p>
+          <p>UBT College</p>
+          <p>2015-2019</p>
+          <p>Graduated</p>
+        </div>
+
+        <div>
+          <p>Full Stack Development Course</p>
+          <p>Per Programera</p>
+          <p>09.2022 - Present</p>
+          <p>Online Course</p>
+        </div>
+
+        <div>
+          <p>RIT - Kosovo</p>
+          <p>Android Development</p>
+          <p>11.2022 - Present</p>
+          <p>Course</p>
+        </div>
+      </div>
+
+      <div class="skills-container reveal fade-bottom">
+        <h2>{Skills}</h2>
+        <div class="skills-icons">
+          <i class="devicon-html5-plain-wordmark colored"></i>
+          <i class="devicon-css3-plain-wordmark colored"></i>
+          <i class="devicon-sass-original colored"></i>
+          <i class="devicon-bootstrap-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <h1 class="title">Contact 📲</h1>
-      <h2 class="subtitle">Contact</h2>
+      <h1 class="title">[Contact 📲]</h1>
+      <div class="contact-container">
+        <div class="contact-container-left reveal fade-left">
+          <div>
+            <span>Phone:</span>
+            <span>+383 48 180 824</span>
+          </div>
+          <div>
+            <span>Email:</span>
+            <span>arbionselimi1@gmail.com</span>
+          </div>
+          <div>
+            <span>My Networks:</span>
+            <a href="https://www.linkedin.com/in/arbion-selimi" id="LinkedIn"
+              ><i class="devicon-linkedin-plain colored"></i
+            ></a>
+            <a href="https://github.com/ArbionSelimi" id="GitHub"
+              ><i class="devicon-github-original-wordmark colored"></i
+            ></a>
+          </div>
+        </div>
+        <div class="contact-container-right reveal fade-right">
+          <form class="contact-form" action="#">
+            <input
+              type="text"
+              id="flname"
+              name="firstlastname"
+              placeholder="First and Last Name"
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+            />
+            <input
+              type="tel"
+              id="tel"
+              name="Phone"
+              placeholder="Phone Number"
+            />
+            <textarea
+              id="Message"
+              name="message"
+              placeholder="Your Message"
+            ></textarea>
+
+            <input id="send-btn" type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
     </section>
   </body>
 </html>
