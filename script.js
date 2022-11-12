@@ -29,3 +29,13 @@ function revealBackToTop() {
 window.onscroll = function () {
   revealBackToTop();
 };
+
+function dropDownMenu() {
+  var element = document.querySelector(".nav");
+  if (element.classList.contains("nav-bar-display")) {
+    element.classList.remove("nav-bar-display");
+  } else {
+    element.classList.add("nav-bar-display");
+  }
+  return true;
+}

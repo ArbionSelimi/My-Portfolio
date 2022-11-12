@@ -4,6 +4,21 @@
   padding: 0;
 }
 
+@import url("responsive.css");
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   font-family: "Anonymous Pro", monospace;
   width: 100%;
@@ -11,12 +26,19 @@ body {
   padding: 0;
 }
 
+#content-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
 #overlay {
   width: 100%;
   background-image: url(./assets/imgs/background-image.jpeg);
   background-repeat: no-repeat;
-  background-size: 100vw;
-  background-position-y: center;
+  background-size: 120%;
+  background-position-y: 70%;
+  background-position-x: 37%;
   height: 100vh;
 }
 
@@ -60,6 +82,10 @@ body {
 .nav a {
   color: rgb(255, 255, 255);
   font-size: 18px;
+}
+
+.dropbtn {
+  display: none;
 }
 
 .back-to-top {
@@ -142,7 +168,13 @@ body {
 }
 
 #about {
-  background-color: rgba(23, 23, 23, 0.246);
+  background: rgb(75, 75, 75);
+  background: linear-gradient(
+    0deg,
+    rgba(75, 75, 75, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -154,6 +186,7 @@ body {
   display: flex;
   justify-content: center;
   font-size: 40px;
+  color: white;
 }
 
 .bio-container {
@@ -164,24 +197,14 @@ body {
   align-items: center;
 }
 
-.bio-container-left img {
-  width: 400px;
-  margin: 20px;
-  border-radius: 15px;
-}
-
-.bio-container img:hover {
-  transform: scaleX(-1);
-  cursor: pointer;
-}
-
-.bio-container-right {
-  font-size: 20px;
-  margin: 20px;
-}
-
 #education {
-  background-color: rgba(255, 255, 255, 0.246);
+  background: rgb(173, 173, 173);
+  background: linear-gradient(
+    0deg,
+    rgba(173, 173, 173, 1) 0%,
+    rgba(144, 144, 144, 1) 50%,
+    rgba(75, 75, 75, 1) 100%
+  );
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -221,17 +244,24 @@ body {
 }
 
 .skills-container h2 {
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom: 50px;
+  font-size: 35px;
 }
 
 .skills-icons i {
-  font-size: 100px;
+  font-size: 150px;
   padding: 30px;
 }
 
 #contact {
-  background-color: rgba(23, 23, 23, 0.246);
+  background: rgb(223, 223, 223);
+  background: linear-gradient(
+    0deg,
+    rgba(223, 223, 223, 1) 0%,
+    rgba(198, 198, 198, 1) 50%,
+    rgba(173, 173, 173, 1) 100%
+  );
   margin: 0;
   width: 100vw;
   padding-bottom: 50px;
@@ -279,24 +309,523 @@ body {
 }
 
 .contact-form input {
-  /* width: 500px; */
   height: 30px;
   margin: 10px;
   border: none;
   border-radius: 5px;
+  padding-left: 5px;
 }
 
 .contact-form textarea {
-  /* width: 500px; */
   resize: none;
   margin: 10px;
   height: 200px;
   border: none;
   border-radius: 5px;
+  padding: 5px;
 }
 
 #send-btn {
   width: 160px;
   align-self: flex-end;
   border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* DESKTOP VIEW */
+#intro .title {
+  font-size: 30px;
+}
+
+#intro .subtitle {
+  font-size: 25px;
+  text-align: center;
+  margin: 100px;
+}
+#intro {
+  padding-top: 160px;
+}
+
+.scroll-downs {
+  top: 320px;
+}
+
+#about {
+  background: rgb(75, 75, 75);
+  background: linear-gradient(
+    0deg,
+    rgba(75, 75, 75, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#about .title {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+}
+.bio-container-left img {
+  width: 250px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.bio-container img:hover {
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+.bio-container-right {
+  font-size: 18px;
+  margin: 20px;
+  color: white;
+}
+
+#education .title {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#education .edu-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.edu-info div {
+  border: 2px solid black;
+  padding: 15px;
+  width: 300px;
+}
+
+.edu-info div p {
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skills-container h2 {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.skills-icons i {
+  font-size: 80px;
+  padding: 30px;
+}
+#contact .title {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* TABLET VERSION  */
+
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/imgs/background-image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 46.5%;
+}
+#header {
+  width: 100vw;
+}
+
+#header img {
+  margin-left: 20px;
+}
+
+.nav-left {
+  font-size: 8px;
+  align-items: center;
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 270px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+#header .nav-bar-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .dropbtn {
+        background-color: black;
+        color: white;
+        border: 2px solid #ff6e42;
+        width: 30px;
+        height: auto;
+      } */
+
+#header .dropbtn {
+  display: block;
+  margin-right: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+#header .dropbtn img {
+  width: 20px;
+  height: 20px;
+  /* margin: 0; */
+}
+
+#intro .title {
+  font-size: 40px;
+  margin-top: 80px;
+}
+
+#intro .subtitle {
+  font-size: 30px;
+  text-align: center;
+}
+
+.scroll-downs {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  width: 34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  margin-top: 100px;
+}
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 150px;
+}
+#about .title {
+  font-size: 35px;
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+}
+.bio-container-left img {
+  width: 300px;
+  margin-bottom: 100px;
+}
+
+.bio-container-right .subtitle {
+  font-size: 30px;
+  text-align: center;
+}
+
+.bio-container-right p {
+  font-size: 20px;
+}
+
+#education {
+  padding-bottom: 80px;
+}
+
+#education .title {
+  font-size: 35px;
+}
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -150px;
+  align-items: center;
+}
+
+#education h2 {
+  font-size: 15px;
+  margin-top: 250px;
+}
+.skills-icons i {
+  font-size: 70px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: -100px;
+}
+
+#contact {
+  width: 100vw;
+  height: 85vh;
+}
+
+#contact .title {
+  font-size: 35px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container-left span {
+  font-size: 20px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.contact-form {
+  align-items: center;
+}
+.contact-form input {
+  width: 350px;
+}
+.contact-form textarea {
+  width: 350px;
+  height: 150px;
+}
+#send-btn {
+  align-self: center;
+}
+
+.back-to-top {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  padding: 5px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  right: 1%;
+  bottom: 1%;
+  z-index: 9999;
+  display: none;
+}
+
+.back-to-top img {
+  width: 25px;
+}
+
+/* MOBILE VERSION */
+
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/imgs/background-image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 47%;
+}
+
+#header {
+  width: 100vw;
+}
+
+#header img {
+  margin-left: 20px;
+}
+
+.nav-left {
+  font-size: 8px;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 270px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#header .nav-bar-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .dropbtn {
+        background-color: black;
+        color: white;
+        border: 2px solid #ff6e42;
+        width: 30px;
+        height: auto;
+      } */
+
+#header .dropbtn {
+  display: block;
+  margin-right: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+#header .dropbtn img {
+  width: 20px;
+  height: 20px;
+  /* margin: 0; */
+}
+
+#intro .title {
+  font-size: 20px;
+}
+
+#intro .subtitle {
+  font-size: 15px;
+  text-align: center;
+}
+
+.scroll-downs {
+  position: absolute;
+  top: 350px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  width: 34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 150px;
+}
+#about .title {
+  font-size: 30px;
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+}
+.bio-container-left img {
+  width: 200px;
+}
+
+.bio-container-right .subtitle {
+  font-size: 20px;
+  text-align: center;
+}
+
+.bio-container-right p {
+  font-size: 12px;
+}
+
+#education {
+  padding-bottom: 80px;
+}
+
+#education .title {
+  font-size: 30px;
+}
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -150px;
+  align-items: center;
+}
+
+#education h2 {
+  font-size: 15px;
+}
+.skills-icons i {
+  font-size: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+}
+
+#contact .title {
+  font-size: 30px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container-left span {
+  font-size: 15px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.contact-form {
+  align-items: center;
+}
+.contact-form input {
+  width: 200px;
+}
+.contact-form textarea {
+  width: 200px;
+  height: 150px;
+}
+#send-btn {
+  align-self: center;
+}
+
+.back-to-top {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  padding: 5px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  right: 20%;
+  bottom: 2%;
+  z-index: 9999;
+  display: none;
+}
+
+.back-to-top img {
+  width: 25px;
 }
